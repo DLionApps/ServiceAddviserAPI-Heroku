@@ -1,0 +1,35 @@
+{
+  "name": "serviceaddviserapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && shx cp package.json dist",
+    "start": "npm run build && node dist",
+    "dev": "nodemon dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DLionApps/ServiceAddviserAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DLionApps/ServiceAddviserAPI/issues"
+  },
+  "homepage": "https://github.com/DLionApps/ServiceAddviserAPI#readme",
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "@hapi/hapi": "^20.0.1",
+    "@hapi/joi": "^17.1.1",
+    "@types/hapi__hapi": "^20.0.1",
+    "@types/mongoose": "^5.7.36",
+    "mongoose": "^5.10.7"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.2",
+    "shx": "^0.3.2",
+    "typescript": "^4.0.3"
+  }
+}
