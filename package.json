@@ -9,9 +9,10 @@
   "scripts": {
     "start": "node dist/index.js",
     "postinstall": "tsc",
-    "dev": "nodemon dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "watch-node": "nodemon dist/index.js",
+    "watch-ts": "tsc -w",
+    "deploy": "git add . && git commit -m Heroku && git push heroku master"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DLionApps/ServiceAddviserAPI.git"
