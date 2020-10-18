@@ -7,7 +7,7 @@ var config = require("../src/config");
 
 export default class APIServer {
   private server!: Server;
-  private port = process.env.PORT || 8000;
+  // private port = process.env.PORT || 8000;
   constructor() {
     mongoose.connect(config.connectionString, config.options);
     mongoose.connection.on("connected", () => {
@@ -18,11 +18,11 @@ export default class APIServer {
     });
   }
 
-  public async init() {
+  public async init(port: any) {
     // Create a server with a host and port
     this.server = new Server({
       host: "localhost",
-      port: this.port,
+      port: port,
     });
 
     // Add the route
@@ -51,6 +51,6 @@ export default class APIServer {
     }
 
     console.log("Server running at:", this.server.info.uri);
-    console.log("Port = " + this.port);
+    console.log("Port = " + port);
   }
 }
