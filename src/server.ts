@@ -22,7 +22,7 @@ export default class APIServer {
     // Create a server with a host and port
     this.server = new Server({
       host: "localhost",
-      port: 8000,
+      port: process.env.port || 8000,
     });
 
     // Add the route
